@@ -23,3 +23,37 @@ Array.prototype.map = function (func) {
   });
   return res;
 };
+
+//www.codewars.com/kata/5f25f475420f1b002412bb1f/train/javascript
+// the alphabet: 'abcdefghijklmnopqrstuvwxyz'
+function findTheNumberPlate(customerID) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  let unit = Math.trunc(customerID / 1000);
+  let remainder = customerID % 1000;
+  console.log('unit', unit, 'remainder', remainder);
+  let strID = `${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}`;
+  let numID = 0;
+  return strID + numID;
+}
+
+console.log('aaa004 ', findTheNumberPlate(3), findTheNumberPlate(3) === 'aaa004' ? 'OK' : 'NO');
+console.log(
+  'baa489 ',
+  findTheNumberPlate(1487),
+  findTheNumberPlate(1487) === 'baa489' ? 'OK' : 'NO',
+);
+console.log(
+  'oba041 ',
+  findTheNumberPlate(40000),
+  findTheNumberPlate(40000) === 'oba041' ? 'OK' : 'NO',
+);
+console.log(
+  'zzz999 ',
+  findTheNumberPlate(17558423),
+  findTheNumberPlate(17558423) === 'zzz999' ? 'OK' : 'NO',
+);
+console.log(
+  'aja802 ',
+  findTheNumberPlate(234567),
+  findTheNumberPlate(234567) === 'aja802' ? 'OK' : 'NO',
+);
