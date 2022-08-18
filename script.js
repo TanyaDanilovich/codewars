@@ -13,3 +13,13 @@ class Animal {
     return `${this.name} is a ${this.type}`;
   }
 }
+
+//https://www.codewars.com/kata/56e20642ddeb0f4fac000344/train/javascript
+
+Array.prototype.map = function (func) {
+  const res = [];
+  this.forEach((element) => {
+    res.push(func(element));
+  });
+  return res;
+};
