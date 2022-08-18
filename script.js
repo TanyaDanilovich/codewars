@@ -31,9 +31,13 @@ function findTheNumberPlate(customerID) {
   let unit = Math.trunc(customerID / 1000);
   let remainder = customerID % 1000;
   console.log('unit', unit, 'remainder', remainder);
-  let strID = `${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}`;
-  let numID = 0;
-  return strID + numID;
+  let strID = `${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}`;
+  let numID = (remainder + 1).toString().split('');
+  while (numID.length < 3) {
+    numID.unshift('0');
+  }
+  let strNumID = numID.reduce((a, b) => a + b.toString(), '');
+  return strID + strNumID;
 }
 
 console.log('aaa004 ', findTheNumberPlate(3), findTheNumberPlate(3) === 'aaa004' ? 'OK' : 'NO');
