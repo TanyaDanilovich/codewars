@@ -41,11 +41,11 @@ function findTheNumberPlate(customerID) {
   } else {
     index1 = Math.trunc(unit % 26);
     index2 = Math.trunc(unit / 26);
-    console.log(2, 'index1', index1, 'index2', index2, 'index3', index3);
+    //console.log(2, 'index1', index1, 'index2', index2, 'index3', index3);
     if (index2 >= 26) {
       index2 = Math.trunc(index2 % 26);
       index3 = Math.trunc(index2 / 26) + 25;
-      console.log(3, 'index1', index1, 'index2', index2, 'index3', index3);
+      // console.log(3, 'index1', index1, 'index2', index2, 'index3', index3);
     }
   }
   strID = `${alphabet[index1]}${alphabet[index2]}${alphabet[index3]}`;
@@ -57,7 +57,7 @@ function findTheNumberPlate(customerID) {
   let strNumID = numID.join('');
   return strID + strNumID;
 }
-
+/* 
 console.log('aaa004 ', findTheNumberPlate(3), findTheNumberPlate(3) === 'aaa004' ? 'OK' : 'NO');
 console.log(
   'baa489 ',
@@ -78,4 +78,8 @@ console.log(
   'aja802 ',
   findTheNumberPlate(234567),
   findTheNumberPlate(234567) === 'aja802' ? 'OK' : 'NO',
-);
+); */
+
+//www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
+//Small enough? - Beginner
+https: function smallEnough(a, limit) {}
