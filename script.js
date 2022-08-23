@@ -28,15 +28,33 @@ Array.prototype.map = function (func) {
 // the alphabet: 'abcdefghijklmnopqrstuvwxyz'
 function findTheNumberPlate(customerID) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  let unit = Math.trunc(customerID / 1000);
-  let remainder = customerID % 1000;
-  console.log('unit', unit, 'remainder', remainder);
-  let strID = `${alphabet[unit]}${alphabet[unit]}${alphabet[unit]}`;
-  let numID = (remainder + 1).toString().split('');
+  let unit = Math.trunc(customerID / 999);
+  let remainder = (customerID % 999) + 1;
+
+  let strID = '';
+  let index1 = unit;
+  let index2 = 0;
+  let index3 = 0;
+
+  if (unit < 26) {
+    //console.log(1, 'index1', index1, 'index2', index2, 'index3', index3);
+  } else {
+    index1 = Math.trunc(unit % 26);
+    index2 = Math.trunc(unit / 26);
+    console.log(2, 'index1', index1, 'index2', index2, 'index3', index3);
+    if (index2 >= 26) {
+      index2 = Math.trunc(index2 % 26);
+      index3 = Math.trunc(index2 / 26) + 25;
+      console.log(3, 'index1', index1, 'index2', index2, 'index3', index3);
+    }
+  }
+  strID = `${alphabet[index1]}${alphabet[index2]}${alphabet[index3]}`;
+  let numID = remainder.toString().split('');
   while (numID.length < 3) {
     numID.unshift('0');
   }
-  let strNumID = numID.reduce((a, b) => a + b.toString(), '');
+
+  let strNumID = numID.join('');
   return strID + strNumID;
 }
 
