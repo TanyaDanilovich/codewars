@@ -82,8 +82,24 @@ console.log(
 
 //www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
 //Small enough? - Beginner
-function smallEnough(a, limit) {
-  console.log(typeof (...a));
+/* function smallEnough(a, limit) {
   return Math.max(...a) <= limit;
-}
-smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100);
+} */
+
+//https://www.codewars.com/kata/563089b9b7be03472d00002b/train/javascript
+//Remove All The Marked Elements of a List
+Array.prototype.remove_ = function (integer_list, values_list) {
+  let res = [];
+  let count = 0;
+  res = integer_list.filter((intEl) => {
+    count++;
+    //return intEl !== 4;
+    return !values_list.includes(intEl);
+  });
+  console.log(count);
+  return res;
+};
+integer_list = [1, 1, 2, 3, 1, 2, 3, 4, 4, 3, 5, 6, 7, 2, 8];
+values_list = [1, 3, 4, 2];
+l = new Array();
+console.log(l.remove_(integer_list, values_list));
