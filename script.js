@@ -83,7 +83,7 @@ console.log(
 //www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
 //Small enough? - Beginner
 function smallEnough(a, limit) {
-  const res = [];
-  res = a.filter((el) => el > limit);
-  return res.length > 0 ? true : false;
+  console.log(typeof (...a));
+  return Math.max(...a) <= limit;
 }
+smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100);
