@@ -88,7 +88,7 @@ console.log(
 
 //https://www.codewars.com/kata/563089b9b7be03472d00002b/train/javascript
 //Remove All The Marked Elements of a List
-Array.prototype.remove_ = function (integer_list, values_list) {
+/* Array.prototype.remove_ = function (integer_list, values_list) {
   let res = [];
   let count = 0;
   res = integer_list.filter((intEl) => {
@@ -102,4 +102,14 @@ Array.prototype.remove_ = function (integer_list, values_list) {
 integer_list = [1, 1, 2, 3, 1, 2, 3, 4, 4, 3, 5, 6, 7, 2, 8];
 values_list = [1, 3, 4, 2];
 l = new Array();
-console.log(l.remove_(integer_list, values_list));
+console.log(l.remove_(integer_list, values_list)); */
+
+//https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
+//Shortest Word
+function findShort(s) {
+  let res = s.split(' ')[0].length;
+  s.split(' ').forEach((word) => {
+    word.length < res ? (res = word.length) : res;
+  });
+  return res;
+}
