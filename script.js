@@ -106,10 +106,27 @@ console.log(l.remove_(integer_list, values_list)); */
 
 //https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
 //Shortest Word
-function findShort(s) {
+/* function findShort(s) {
   let res = s.split(' ')[0].length;
   s.split(' ').forEach((word) => {
+
     word.length < res ? (res = word.length) : res;
   });
   return res;
+} */
+
+//https://www.codewars.com/kata/56ba65c6a15703ac7e002075/train/javascript
+//Find the smallest power higher than a given a value
+
+function findNextPower(val, pow_) {
+  let num = 1;
+  while (Math.pow(num, pow_) <= val) {
+    console.log('1 - ', val, num, Math.pow(num, pow_));
+    num++;
+    console.log('2 - ', val, num, Math.pow(num, pow_));
+  }
+
+  return Math.pow(num, pow_);
 }
+console.log(findNextPower(12385, 3));
+//commit 1
