@@ -131,3 +131,4 @@ function findNextPower(val, pow_) {
 console.log(findNextPower(12385, 3));
 //commit 1
 //commit 2
+//commit 3
