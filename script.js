@@ -117,7 +117,7 @@ console.log(l.remove_(integer_list, values_list)); */
 
 //https://www.codewars.com/kata/56ba65c6a15703ac7e002075/train/javascript
 //Find the smallest power higher than a given a value
-
+/* 
 function findNextPower(val, pow_) {
   let num = 1;
   while (Math.pow(num, pow_) <= val) {
@@ -129,13 +129,4 @@ function findNextPower(val, pow_) {
   return Math.pow(num, pow_);
 }
 console.log(findNextPower(12385, 3));
-//commit 1
-//commit 2
-//commit 3
-//commit 4
-//commit 5
-//commit 6
-//commit 7
-//commit 8
-//commit 9
-//commit 10
+ */
