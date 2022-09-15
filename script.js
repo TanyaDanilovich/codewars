@@ -139,3 +139,5 @@ new branch();
 console.log('object');
 console.log('add branch4');
 console.log('add branch5');
+console.log('add branch6');
+console.log('add branch7');
